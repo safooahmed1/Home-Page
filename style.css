@@ -1,0 +1,62 @@
+.hero {
+  width: 100vw;
+  height: 100vh;
+  .boxUrl {
+    background-color: #fffffff4;
+    top: 20vh;
+    .btn {
+      width: 7rem;
+      height: 7rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+
+      i {
+        top: 0;
+        right: 0;
+      }
+      .icon {
+        width: 90%;
+        height: 60px;
+      }
+      span {
+        width: 2rem;
+        height: 1rem;
+      }
+    }
+  }
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  width: 575px;
+  border-radius: 30px;
+  border: 1px solid #dcdcdc;
+  justify-content: center;
+}
+.bar:hover {
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.bar:focus-within {
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline: none;
+}
+.searchbar {
+  height: 45px;
+  border: none;
+  width: 500px;
+  font-size: 16px;
+  outline: none;
+}
+.voice {
+  height: 20px;
+  position: relative;
+  /* top: 5px;
+  left: 10px; */
+}
