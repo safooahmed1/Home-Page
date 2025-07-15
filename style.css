@@ -1,3 +1,11 @@
+.wallPaper {
+  position: fixed;
+  background-size: cover; /* دي أهم حاجة: بتخلي الصورة تغطي العنصر بالكامل مع الحفاظ على الأبعاد */
+  background-position: center; /* بتخلي الصورة في المنتصف أفقياً ورأسياً */
+  background-repeat: no-repeat; /* عشان تتأكد إن الصورة مش هتتكرر لو العنصر أكبر منها */
+  width: 100vw;
+  height: 100vh;
+}
 .hero {
   width: 100vw;
   height: 100vh;
@@ -8,6 +16,7 @@
   }
   .boxUrl {
     background-color: #ffffffac;
+    box-shadow: 0 0 20px 6px #ffffffac;
     top: 20vh;
     .btn {
       width: 7rem;

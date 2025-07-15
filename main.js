@@ -1,25 +1,35 @@
 //Selector
 const wallPaper = document.querySelector("#wallPaper");
 const boxUrl = document.querySelector("#boxUrl");
+const nameInput = document.querySelector("#recipient-name");
+const urlInput = document.querySelector("#message-text");
+
+//storeg (date)
+const invetoryBox = JSON.parse(localStorage.getItem("invetoryBox")) || [];
+const invetoryWallpaper = JSON.parse(localStorage.getItem("wallPaper")) || [];
 
 //heroSection
 const wallpaper = [{ img: "./b-047.jpg" }];
 
 let changBg = () => {
   wallpaper.forEach((el, index) => {
-    wallPaper.innerHTML += `<img src="${el.img}" class="position-fixed"/>`;
+    wallPaper.innerHTML += `<img src="${el.img}" class="wallPaper"/>`;
   });
 };
 changBg();
 
 //boxUrl
-const invetoryBox = [
-  { name: "YouTube", url: "youtube.com" },
-  { name: "Spotify", url: "spotify.com" },
-  { name: "Google", url: "google.com" },
-  { name: "GitHub", url: "https://github.com/" },
-];
 
+let saveBtn = () => {
+  let nameUrl = nameInput.value;
+  let linkUrl = urlInput.value;
+  let obj = { name: nameUrl, url: linkUrl };
+  invetoryBox.push(obj);
+  localStorage.setItem("invetoryBox", JSON.stringify(invetoryBox));
+  console.log(nameUrl);
+  nameInput.value = "";
+  urlInput.value = "";
+};
 let showBoxUrl = () => {
   invetoryBox.forEach((el, index) => {
     boxUrl.innerHTML += `
